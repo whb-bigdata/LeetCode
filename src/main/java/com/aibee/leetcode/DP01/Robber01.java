@@ -10,15 +10,15 @@ import java.util.List;
  * 由于不能抢劫邻近住户，如果抢劫了第 i -1 个住户，那么就不能再抢劫第 i 个住户，所以
  */
 public class Robber01 {
-    public static int[] arr = new int[]{15, 20, 2, 12, 1000};
+    public static int[] arr = new int[]{10005, 20, 2, 12, 1000,10017};
 
     public static void main(String[] args) {
-        System.out.println(robround(arr));
+        System.out.println(rob(arr));
     }
 
 
     //todo 练习1
-    public static int rob(int[] nums) {
+    public static int robfirst(int[] nums) {
         int pre2 = 0, pre1 = 0;
         for (int i = 0; i < nums.length; i++) {
             int cur = Math.max(pre2 + nums[i], pre1);
@@ -28,7 +28,7 @@ public class Robber01 {
         return pre1;
     }
     //todo 练习2
-    public static  int robround(int[] nums){
+    public static  int robsecond(int[] nums){
         int pre1 = 0,pre2 = 0;
         for (int i = 0; i < nums.length; i++) {
             int cur = Math.max(pre1 + nums[i] , pre2);
@@ -38,5 +38,25 @@ public class Robber01 {
         return pre2;
     }
     //todo 变种：头尾相接，形成环状
+    public static  int rob(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int n = nums.length;
+        if (n == 1) {
+            return nums[0];
+        }
+        return Math.max(robr(nums, 0, n - 2), robr(nums, 1, n - 1));
+    }
+
+    private static int robr(int[] nums, int first, int last) {
+        int pre2 = 0, pre1 = 0;
+        for (int i = first; i <= last; i++) {
+            int cur = Math.max(pre1, pre2 + nums[i]);
+            pre2 = pre1;
+            pre1 = cur;
+        }
+        return pre1;
+    }
 
 }
