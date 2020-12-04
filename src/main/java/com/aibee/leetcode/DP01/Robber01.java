@@ -13,16 +13,11 @@ public class Robber01 {
     public static int[] arr = new int[]{15, 20, 2, 12, 1000};
 
     public static void main(String[] args) {
-        System.out.println(rob(arr));
+        System.out.println(robround(arr));
     }
 
-    public static int robber() {
 
-
-       // System.out.println("抢劫第" + i + "家，最大抢劫量为：" + robber()[i]);
-
-        return 1;
-    }
+    //todo 练习1
     public static int rob(int[] nums) {
         int pre2 = 0, pre1 = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -32,5 +27,16 @@ public class Robber01 {
         }
         return pre1;
     }
+    //todo 练习2
+    public static  int robround(int[] nums){
+        int pre1 = 0,pre2 = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int cur = Math.max(pre1 + nums[i] , pre2);
+            pre1 = pre2;
+            pre2 = cur;
+        }
+        return pre2;
+    }
+    //todo 变种：头尾相接，形成环状
 
 }
