@@ -1,5 +1,7 @@
 package com.aibee.leetcode.DP01;
 
+import jdk.nashorn.internal.ir.CallNode;
+
 import java.util.List;
 
 /**
@@ -11,7 +13,7 @@ import java.util.List;
  */
 public class Robber01 {
     public static int[] arr = new int[]{10005, 20, 2, 12, 1000,10017};
-
+    public int[] arr1 = new int[]{10,100};
     public static void main(String[] args) {
         System.out.println(rob(arr));
     }

@@ -18,13 +18,23 @@ public class numsum02 {
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] resoult = solution.twoSum(arrs, 9);
-        System.out.println(resoult);
+        for (int i : resoult) {
+            System.out.println(i);
+        }
+
     }
 }
 class  Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] ints = new int[2];
 
-        return ints;
+        for (int i = 0; i < nums.length - 1; i++) {
+
+            for (int j = i + 1; j < nums.length - 1; j++) {
+                if(nums[i] + nums[j] == target){
+                    return new int[]{i,j};
+                     }
+            }
+        }
+        return null;
     }
 }
