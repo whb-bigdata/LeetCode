@@ -9,6 +9,7 @@ object SCNumsum02 {
 
   def sumnum(args: Array[Int]): Array[Int] = {
     val arr = Array[Int](args.length)
+
     for (a <- 0 to args.length ) {
 
 
