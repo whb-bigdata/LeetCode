@@ -4,13 +4,18 @@ object SCNumsum02 {
 
   def main(args: Array[String]): Unit = {
     val arr = Array(2, 7, 11, 15)
-    print(sumnum(arr))
+    print(sumnum(arr,9).toList)
   }
 
-  def sumnum(args: Array[Int]): Array[Int] = {
-    val arr = Array[Int](args.length)
-    for (a <- 0 to args.length ) {
-     arr.insert
+  def sumnum(args: Array[Int],sum:Int): Array[Int] = {
+    var arr = scala.collection.mutable.Map[Int, Int]()
+    for (a <- 0 to args.length - 1 ) {
+      if(arr.getOrElse(args(a),"-1").equals("-1")){
+      arr += ((sum - args(a)) -> a)
+      }else{
+      return Array(arr.get(sum - args(a)).asInstanceOf[Int],a)
+      }
     }
+    Array()
   }
 }
