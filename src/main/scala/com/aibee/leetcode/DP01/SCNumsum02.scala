@@ -13,7 +13,7 @@ object SCNumsum02 {
       if(arr.getOrElse(args(a),"-1").equals("-1")){
       arr += ((sum - args(a)) -> a)
       }else{
-      return Array(arr.get(sum - args(a)).asInstanceOf[Int],a)
+      return Array(arr.getOrElse(args(a),-1),a)
       }
     }
     Array()
