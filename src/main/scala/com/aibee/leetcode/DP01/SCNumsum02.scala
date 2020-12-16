@@ -4,7 +4,7 @@ object SCNumsum02 {
 
   def main(args: Array[String]): Unit = {
     val arr = Array(2, 7, 11, 15)
-    print(sumnum(arr,9).toList)
+    print(sumnum(arr,17).toList)
   }
 
   def sumnum(args: Array[Int],sum:Int): Array[Int] = {
