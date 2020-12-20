@@ -28,17 +28,17 @@ object SCContainer {
     }
     sum
   }
-  def maxArea1(height:Array[Int]):Int = {
+
+  def maxArea1(height: Array[Int]): Int = {
     if (height.size <= 1) return -1
     var i = 0
     var j: Int = height.size - 1
     var res = 0
-    while ( {
-      i < j
-    }) {
+    while (i < j) {
       val h: Int = Math.min(height(i), height(j))
       res = Math.max(res, h * (j - i))
-      if (height(i) < height(j)) i += 1
+      if (height(i) < height(j))
+        i += 1
       else j -= 1
     }
     res
