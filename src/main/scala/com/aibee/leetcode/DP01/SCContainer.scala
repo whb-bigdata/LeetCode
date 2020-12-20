@@ -41,6 +41,7 @@ object SCContainer {
         i += 1
       else j -= 1
     }
+
     res
   }
 
