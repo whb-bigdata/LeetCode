@@ -1,26 +1,49 @@
 package com.aibee.leetcode.DP01;
 
 
-import scala.collection.immutable.List;
-import scala.collection.mutable.Stack;
-
-import javax.swing.tree.TreeNode;
-import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 
-/**
- * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
- *
- */
+
 public class TreeNode03 {
-    List<Integer> result = new LinkedList<>();
-    public List<Integer> inorderTraversal(TreeNode root) {
-        if (root==null) return new LinkedList<>();
-
-        inorderTraversal(root.left);
-        result.add(root.val);
-        inorderTraversal(root.right);
-
-        return result;
+    public static void main(String[] args) {
+        System.out.println(inorderTraversal());
     }
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> list = new LinkedList<>();
+        while (root != null || !stack.isEmpty()) {
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+            } else {
+                root = stack.pop();
+                list.add(root.val);
+                root = root.right;
+            }
+        }
+        return list;
+    }
+
+
+
 }
