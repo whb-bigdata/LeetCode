@@ -8,26 +8,14 @@ import java.util.Stack;
 
 public class TreeNode03 {
     public static void main(String[] args) {
-        System.out.println(inorderTraversal());
+        TreeNode left = new TreeNode(3);
+        TreeNode right = new TreeNode(5);
+        TreeNode treeNode = new TreeNode(1,right,right);
+        TreeNode treeNode1 = new TreeNode(6,treeNode,left);
+
+        System.out.println(inorderTraversal(treeNode1));
     }
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
     public static List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> list = new LinkedList<>();
@@ -46,4 +34,22 @@ public class TreeNode03 {
 
 
 
+}
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 }
