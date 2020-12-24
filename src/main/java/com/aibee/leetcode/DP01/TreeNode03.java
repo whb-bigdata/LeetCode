@@ -20,6 +20,7 @@ public class TreeNode03 {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> list = new LinkedList<>();
         while (root != null || !stack.isEmpty()) {
+
             if (root != null) {
                 stack.push(root);
                 root = root.left;
