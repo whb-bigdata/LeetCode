@@ -17,8 +17,8 @@ public class TreeNode03 {
     }
 
     public static List<Integer> inorderTraversal(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<>();
-        List<Integer> list = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        List<Integer> list = new LinkedList<Integer>();
         while (root != null || !stack.isEmpty()) {
 
             if (root != null) {
