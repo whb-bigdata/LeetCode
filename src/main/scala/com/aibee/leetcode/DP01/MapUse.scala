@@ -10,6 +10,8 @@ object MapUse {
     val map = immutableMap + (2 -> 4)
     var map1 = immutableMap + (2 -> 4)
     var map3 = immutableMap + (2 -> 4)
+    var map4 = immutableMap + (2 -> 5)
+    print(map4)
     emptyMap("3") = 20
     println(emptyMap.getOrElse("3",0))
     val stringToInt: mutable.Map[String, Int] = scala.collection.mutable.Map[String, Int]()
