@@ -8,6 +8,9 @@ object MapUse {
     val empyMapInt = new mutable.HashMap[Int, Int]()
     val immutableMap = Map(4 -> 8 , 5 -> 10)
     val map = immutableMap + (2 -> 4)
+    val t1 = new mutable.HashMap[Int,String]()
+    val map2 = t1 + (3 -> "333")
+    print(map2)
     emptyMap("3") = 20
     println(emptyMap.getOrElse("3",0))
 
