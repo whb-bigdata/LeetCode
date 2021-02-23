@@ -13,7 +13,7 @@ object SCContainer {
   var water = Array(5, 2, 3, 4, 5)
 
   def main(args: Array[String]): Unit = {
-    print(max(water))
+
   }
 
   def maxArea(height: Array[Int]): Int = {
