@@ -28,6 +28,10 @@ object SCContainer {
     }
     sum
   }
+  def test(map: Map[String,Int]) ={
+    val testmap =
+    map + ("小明" -> 1)
+  }
 
   def maxArea1(height: Array[Int]): Int = {
     if (height.size <= 1) return -1
