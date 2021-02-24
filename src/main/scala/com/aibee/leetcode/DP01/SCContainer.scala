@@ -13,7 +13,7 @@ object SCContainer {
   var water = Array(5, 2, 3, 4, 5)
 
   def main(args: Array[String]): Unit = {
-
+  print(test())
   }
 
   def maxArea(height: Array[Int]): Int = {
@@ -30,9 +30,10 @@ object SCContainer {
     }
     sum
   }
-  def test(map: mutable.Map[String,Int]) ={
+  def test(map: mutable.Map[String,Int] = mutable.Map("张三" -> 2)) ={
     var testmap = scala.collection.mutable.Map[String,Int]()
     testmap = map.+ ("小明" -> 1)
+    testmap
   }
 
 
