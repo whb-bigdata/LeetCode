@@ -35,6 +35,9 @@ object SCContainer {
     testmap = map.+ ("小明" -> 1)
     testmap
   }
+  def filter(map:mutable.Map[String,String]) = {
+
+  }
 
 
   def maxAr1(height: Array[Int]): Int = {
