@@ -7,7 +7,6 @@ import org.apache.spark.sql.types.{DataType, LongType, StructField, StructType}
 
 object SqlUDAF {
   def main(args: Array[String]): Unit = {
-
     // TODO SparkSQL
     val sparkConf = new SparkConf().setMaster("local[*]").setAppName("SQL")
     val spark : SparkSession = SparkSession.builder().config(sparkConf).getOrCreate()
