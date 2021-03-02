@@ -10,7 +10,6 @@ object SqlUDAF {
     // TODO SparkSQL
     val sparkConf = new SparkConf().setMaster("local[*]").setAppName("SQL")
     val spark : SparkSession = SparkSession.builder().config(sparkConf).getOrCreate()
-
     // 所有的聚合操作，都应该有缓冲区的概念
     //        val rdd = spark.sparkContext.makeRDD(
     //            List( 20,30,40,50 )
