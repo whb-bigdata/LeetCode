@@ -11,6 +11,7 @@ object MapUse {
     val t1 = new mutable.HashMap[Int,String]()
     val map2 = t1 + (3 -> "333")
     print(map2)
+
     emptyMap("3") = 20
     println(emptyMap.getOrElse("3",0))
 
