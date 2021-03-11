@@ -3,6 +3,7 @@ package com.aibee.leetcode.DP01
 import scala.collection.mutable
 
 object MapUse {
+
   def main(args: Array[String]): Unit = {
     val emptyMap : mutable.HashMap[String,Int] = new mutable.HashMap[String,Int]()
     val empyMapInt = new mutable.HashMap[Int, Int]()
