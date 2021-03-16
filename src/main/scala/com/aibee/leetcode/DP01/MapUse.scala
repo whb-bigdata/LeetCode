@@ -16,7 +16,6 @@ object MapUse {
 
 
 
-
     println(emptyMap.getOrElse("3",0))
     val stringToInt: mutable.Map[String, Int] = scala.collection.mutable.Map[String, Int]()
   }
