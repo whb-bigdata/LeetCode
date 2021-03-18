@@ -12,8 +12,6 @@ object MapUse {
     val map2 = t1 + (3 -> "333")
     print(map2)
     emptyMap("3") = 20
-
-
     emptyMap("3") = 20
     println(emptyMap.getOrElse("3",0))
 
