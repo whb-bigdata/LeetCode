@@ -12,6 +12,7 @@ object MapUse {
     val map2 = t1 + (3 -> "333")
     println(map2)
     emptyMap("3") = 20
+
     emptyMap("3") = 20
     println(emptyMap.getOrElse("3",0))
     val stringToInt: mutable.Map[String, Int] = scala.collection.mutable.Map[String, Int]()
