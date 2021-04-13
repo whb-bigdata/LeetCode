@@ -10,7 +10,6 @@ object MapUse {
     val map = immutableMap + (2 -> 4)
     val t1 = new mutable.HashMap[Int,String]()
     val map2 = t1 + (3 -> "333")
-    println(map2)
     println(emptyMap.getOrElse("3",0))
     val stringToInt: mutable.Map[String, Int] = scala.collection.mutable.Map[String, Int]()
   }
