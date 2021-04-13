@@ -8,13 +8,13 @@ object MapUse {
     val empyMapInt = new mutable.HashMap[Int, Int]()
     val immutableMap:mutable.Map[Int,Int] = mutable.Map(4 -> 8 , 5 -> 10)
     var z = Array("Runoob", "Baidu", "Google")
-    var im:mutable.Map[String,mutable.Map[String,Array[String]]] = mutable.Map("a" -> mutable.Map("a1" -> z))
+    var im:mutable.Map[String,mutable.Map[String,String]] = mutable.Map("a" -> mutable.Map("a1" -> "z"))
     var imtest:Array[String] = Array[String]()
     val strings= im.get("a").get("a1")
-    var strings1: Array[String] = im.get("a").get("a")
-    val strings2: Array[String] = im.get("a").get("b")
-    val maybeStringToStrings: Option[mutable.Map[String, Array[String]]] = im.get("a")
-    val strings3: Array[String] = maybeStringToStrings.get("a")
+    var strings1= im.get("a").get("a")
+    val strings2= im.get("a").get("b")
+    val maybeStringToStrings: Option[mutable.Map[String, String]] = im.get("a")
+    val strings3= maybeStringToStrings.get("a")
 
 
     val myMap: mutable.Map[String, String] = mutable.Map("key1" -> "value")
