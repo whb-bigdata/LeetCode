@@ -10,10 +10,11 @@ object MapUse {
     var z = Array("Runoob", "Baidu", "Google")
     var im:mutable.Map[String,mutable.Map[String,Array[String]]] = mutable.Map("a" -> mutable.Map("a1" -> z))
     var imtest:Array[String] = Array[String]()
-    val strings: Array[String] = im.get("a").get("a1")
+    val strings= im.get("a").get("a1")
     var strings1: Array[String] = im.get("a").get("a")
     val strings2: Array[String] = im.get("a").get("b")
     val maybeStringToStrings: Option[mutable.Map[String, Array[String]]] = im.get("a")
+    val strings3: Array[String] = maybeStringToStrings.get("a")
 
 
     val myMap: mutable.Map[String, String] = mutable.Map("key1" -> "value")
