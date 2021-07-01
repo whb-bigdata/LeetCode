@@ -13,7 +13,6 @@ object MapUse {
     val strings= im.get("a").get("a1")
     var strings1= im.get("a").get("a")
     val strings2= im.get("a").get("b")
-
     val maybeStringToStrings: Option[mutable.Map[String, String]] = im.get("a")
     val strings3= maybeStringToStrings.get("a")
     val myMap: mutable.Map[String, String] = mutable.Map("key1" -> "value")
